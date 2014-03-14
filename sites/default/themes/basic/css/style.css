@@ -5,6 +5,7 @@ body {
    * http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography */
   font: 13px/1.5em "Helvetica Neue", helvetica, Arial, sans-serif;
   letter-spacing: 0.03em;
+  background: transparent url("") center top no-repeat;
 }
 
 /* Links */
@@ -189,7 +190,29 @@ div.status {
 #sidebar-first,
 #sidebar-second,
 #navigation {
-  background: rgba(170, 170, 170, 0.2);
+  background: transparent;
+}
+
+#header,
+#main,
+#footer {
+  border-left: 1px solid #e60d2e;
+  padding: 0px 25px 0px 25px;
+}
+
+#main {
+  background: transparent url("../images/main_back_01.jpg") no-repeat 25px center;
+  background-size: cover;
+}
+
+#content {
+  padding: 15px 0px 0px 0px;
+
+}
+
+#footer {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e60d2e;
 }
 
 * {
@@ -283,3 +306,70 @@ body:before {
     background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0, #eeeeee 0, #eeeeee 9.67742%, rgba(0, 0, 0, 0) 9.67742%, rgba(0, 0, 0, 0) 12.90323%, #eeeeee 12.90323%, #eeeeee 22.58065%, rgba(0, 0, 0, 0) 22.58065%, rgba(0, 0, 0, 0) 25.80645%, #eeeeee 25.80645%, #eeeeee 35.48387%, rgba(0, 0, 0, 0) 35.48387%, rgba(0, 0, 0, 0) 38.70968%, #eeeeee 38.70968%, #eeeeee 48.3871%, rgba(0, 0, 0, 0) 48.3871%, rgba(0, 0, 0, 0) 51.6129%, #eeeeee 51.6129%, #eeeeee 61.29032%, rgba(0, 0, 0, 0) 61.29032%, rgba(0, 0, 0, 0) 64.51613%, #eeeeee 64.51613%, #eeeeee 74.19355%, rgba(0, 0, 0, 0) 74.19355%, rgba(0, 0, 0, 0) 77.41935%, #eeeeee 77.41935%, #eeeeee 87.09677%, rgba(0, 0, 0, 0) 87.09677%, rgba(0, 0, 0, 0) 90.32258%, #eeeeee 90.32258%, #eeeeee 100.0%, rgba(0, 0, 0, 0) 100.0%);
 */  }
 }
+
+/* MENU TOP */
+
+#block-superfish-1 {
+  margin: 30px 0px 0px 0px;
+  min-width: 1000px;
+}
+
+#block-superfish-1 li {
+  background: #f4f4f4;
+  margin: 0px 1px 0px 0px;
+  -webkit-appearance: none;
+  -webkit-border: none;
+  -webkit-radius: none;
+  border: 1px solid #fff;
+  border-bottom: 0px solid #fff;
+  border-radius: 0px;
+}
+
+  /*#block-superfish-1 li.sf-item-1 a {
+    background: #b8b9ba;
+
+  }
+
+      #block-superfish-1 li.sf-item-1 a {
+        background: #b8b9ba;
+        color: #fff;
+
+      }
+        #block-superfish-1 li.sf-item-1 a:hover {
+          background: #fff;
+          color: #e60d2e;
+        }*/
+
+
+
+  #block-superfish-1 li a {
+    padding: 7px 20px;
+    text-shadow: none;
+    font-size: 13px;
+    color: #5e5e5e;
+  }
+
+
+      #block-superfish-1 li a.active-trail,
+      #block-superfish-1 li a.active {
+        background: #b8b9ba;
+        color: #fff;
+      }
+
+    #block-superfish-1 li:hover {
+      border: 1px solid #b8b9ba;
+      border-bottom: 0px solid #fff;
+    }
+
+    #block-superfish-1 li:hover a.active-trail,
+    #block-superfish-1 li:hover a.active {
+      background: #fff;
+    }
+
+      #block-superfish-1 li:hover a {
+        color: #e60d2e;
+      }
+
+
+
+
