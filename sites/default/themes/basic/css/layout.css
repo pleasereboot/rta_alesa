@@ -77,11 +77,11 @@ body {
   }
 
   #header,
-  #main,
   #footer {
     margin: 0px 25px 0px 25px;
     padding: 0px 25px 0px 25px;
   }
+
 
   #header {
     margin-top: 25px; 
@@ -94,6 +94,8 @@ body {
   #main {
     height: 100%; 
     text-align: center;
+    margin: 0px 0px 0px 25px;
+    padding: 0px 0px 0px 25px;
   }
 
 #page:before, #page:after {
@@ -111,7 +113,7 @@ body {
 
 .no-sidebars #content {
   margin: 0px auto;
-  width: 840px;
+  width: 960px;
 }
 .no-sidebars #content:last-child {
  /* margin-right: 0;*/
@@ -207,7 +209,6 @@ body {
   display: block;
   float: left;
   margin-right: 2.12766%;
-  width: 57.44681%;
   margin-left: 17.02128%;
 }
 .two-sidebars #content:last-child {

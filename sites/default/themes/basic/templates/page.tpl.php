@@ -22,7 +22,7 @@
     <!-- ______________________ MAIN _______________________ -->
   <div class="container container-main">
     <div id="main" class="clearfix">
-
+    <section id="wrapper">
       <section id="content">
 
           <?php if ($breadcrumb || $title|| $messages || $tabs || $action_links): ?>
@@ -37,7 +37,13 @@
               <?php print render($title_prefix); ?>
 
               <?php if ($title): ?>
-                <h1 class="title"><?php print $title; ?></h1>
+                <div class="h1-container"> 
+                  <h1 class="title">
+                    <strong>
+                      <?php print $title; ?>
+                    </strong>
+                  </h1>
+                </div>
               <?php endif; ?>
 
               <?php print render($title_suffix); ?>
@@ -75,6 +81,7 @@
         </aside>
       <?php endif; ?> <!-- /sidebar-second -->
     </div><!-- /main -->
+    </div>
   </div> 
 
     <!-- ______________________ FOOTER _______________________ -->
