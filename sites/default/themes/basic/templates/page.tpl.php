@@ -37,13 +37,9 @@
               <?php print render($title_prefix); ?>
 
               <?php if ($title): ?>
-                <div class="h1-container"> 
-                  <h1 class="title">
-                    <strong>
+                <h1 class="title">
                       <?php print $title; ?>
-                    </strong>
-                  </h1>
-                </div>
+                 </h1>
               <?php endif; ?>
 
               <?php print render($title_suffix); ?>
@@ -90,6 +86,7 @@
 
       <footer id="footer">
         <?php print render($page['footer']); ?>
+        <div id="logo-footer"></div>
       </footer> <!-- /footer -->
     <?php endif; ?>
   </div>

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the page - advanced feature.
+ */
+
+include_once 'page_advanced.features.inc';
