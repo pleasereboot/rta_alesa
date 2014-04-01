@@ -1,3 +1,35 @@
+@font-face {
+    font-family: 'rtvickerman-webfont';
+    src: url('fonts/rtvickerman-webfont.eot');
+    src: url('fonts/rtvickerman-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/rtvickerman-webfont.woff') format('woff'),
+         url('fonts/rtvickerman-webfont.ttf') format('truetype'),
+         url('fonts/rtvickerman-webfont.svg#rtvickerman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'rtvickerman-light-webfont';
+    src: url('fonts/rtvickerman-light-webfont.eot');
+    src: url('fonts/rtvickerman-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/rtvickerman-light-webfont.woff') format('woff'),
+         url('fonts/rtvickerman-light-webfont.ttf') format('truetype'),
+         url('fonts/rtvickerman-light-webfont.svg#rtvickerman-light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'rtvickerman-bold-webfont';
+    src: url('fonts/rtvickerman-bold-webfont.eot');
+    src: url('fonts/rtvickerman-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/rtvickerman-bold-webfont.woff') format('woff'),
+         url('fonts/rtvickerman-bold-webfont.ttf') format('truetype'),
+         url('fonts/rtvickerman-bold-webfont.svg#rtvickerman-bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 /* Font styles. */
 body {
   color: #646464;
@@ -5,7 +37,7 @@ body {
   margin: 0;
   /* Setting up font size, leading and font family
    * http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography */
-  font: 13px/1.5em "Helvetica Neue", helvetica, Arial, sans-serif;
+  font: 13px/1.5em "rtvickerman-webfont", helvetica, Arial, sans-serif;
   letter-spacing: 0.03em;
   background: transparent url("") center top no-repeat;
 }
@@ -375,7 +407,7 @@ body:before {
 #block-superfish-1 {
   margin: 30px 0px 0px -1px;
   padding: 0px 0px 3px 0px;
-  min-width: 1000px;
+  min-width: 1060px;
 }
 
 #block-superfish-1 li.sf-depth-1 {
@@ -545,6 +577,8 @@ body:before {
       width: 225px;
     } 
 
+/* LEVEL 1 */
+
     .page-main {
       width: 960px;
     }
@@ -633,3 +667,209 @@ body:before {
         right: 25px;
         margin-top: 30px;
       }
+
+
+/* LEVEL 2 AND 3 */      
+
+.second-level #wrapper {
+  background: transparent url("../images/back_texture_long_sub.png") repeat-x;
+}
+
+
+
+.page-main-sub {
+
+}
+
+        .page-main-sub .page-banner {
+          height: 375px;
+        }
+
+        .page-main-sub .page-main-title {
+          top:40px;
+        }     
+
+          .page-main-sub .page-main-title-row {
+            background-color: #e60d2e;
+            padding: 0px 10px;
+            margin: 0px 0px 5px 0px;    
+            float: left;
+            clear:both;
+            font-size: 1.35em;
+          }
+
+
+
+        .page-main-sub .page-main-nav {
+          background: #fff;
+          height: 375px;
+          color: #000;
+          font-size: 1.0em;
+        }
+
+          #content .page-main-sub .page-main-nav ul {
+            margin: 0px;
+          }
+
+              #content .page-main-sub .page-main-nav ul ul {
+                margin-left: 14px;
+              }
+
+                #content .page-main-sub .page-main-nav ul.menu li {
+                  padding-bottom: 4px;
+                }
+
+                #content .page-main-sub .page-main-nav ul ul a:before {
+                  content: "- ";
+                }             
+
+                  #content .page-main-sub .page-main-nav ul ul a.active-trail {
+                    color: #e60d2e;
+                    font-weight: normal;
+                  }
+
+            .page-main-sub .page-main-nav ul.menu li {
+              margin: 0px;
+              list-style: none;
+              padding-bottom: 4px;
+            }
+
+              .page-main-sub .page-main-nav a {
+                color: #000;
+                text-decoration: none;
+              }
+
+                  .page-main-sub .page-main-nav a:hover {
+                    color: #e60d2e;
+                  }              
+
+                .page-main-sub .page-main-nav a.active-trail {
+                  font-weight: bold;
+                }
+
+
+.page-banner-bottom {
+  display: inline-block;
+}
+
+.page-text-bottom {
+  display: inline-block;
+  width: 320px;
+  height: 265px;
+  vertical-align: top;
+  background-color: #eee;
+  padding: 0px 25px;
+  color: #000;
+  font-size: 1.2em;
+}
+
+/* ----- RESPONSIVE ----- */
+
+@media screen and (max-width: 1060px) {
+
+#block-superfish-1 {
+  min-width: inherit;
+}
+
+  #superfish-1-select {
+    width: 100%;
+  }
+
+  .not-front #wrapper,
+  .second-level #wrapper {
+    background: none;
+
+  }
+
+  .page-main-title {
+    top: 20px;
+  }
+
+  .splash-container {
+    width: 100%
+  }
+
+    .splash-box-left {
+      width: 100%;
+      background: transparent url('../images/splash_left.jpg') no-repeat;
+      display: block;
+      float: left;
+      height: 300px;
+      color: #fff;
+    }
+
+    .splash-box-right {
+      width: 100%;
+      background: transparent url('../images/splash_right.jpg') no-repeat;
+      display: block;
+      float: left;
+      height: 300px;
+      color: #fff;
+    }
+
+  .no-sidebars #content {
+      margin: 0px auto;
+      width: 100%;
+  }
+
+  .page-main {
+      width: 100%;
+  }
+
+  .page-banner {
+    height: auto;
+  }
+  .page-banner img,
+  .page-main-banner img {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+  }
+
+
+  .page-main-nav {
+      background: transparent url('../images/box_back_68.png');
+      width: 100%;
+      z-index: 10;
+      position: relative;
+      top: inherit;
+      right: inherit;
+      padding: 20px;
+  }
+
+  .page-main-left.group-left {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .page-main-right.group-right {
+    width: 100%;
+    padding: 20px;
+    margin: 20px 0px;
+  }
+
+  .page-banner-bottom,
+  .page-text-bottom {
+    display: block;
+    width: 100%;
+  }
+
+  .page-text-bottom {
+    height: auto;
+    padding: 20px;
+    margin: 20px 0px;
+  }  
+
+  #logo-footer {
+    display: block;
+    margin-top: -22px;
+    bottom: inherit;
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+
+}
+
+
