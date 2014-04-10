@@ -1,0 +1,9 @@
+name = TM
+description = Module de TM Design
+core = 7.x
+package = TM
+
+version = "7.x-1.0"
+core = "7.x"
+project = "TM"
+

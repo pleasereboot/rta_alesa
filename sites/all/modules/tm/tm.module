@@ -1,0 +1,114 @@
+<?php
+
+
+function tm_preprocess_page(&$vars, $hook) {
+  //drupal_add_js(array('tm' => array('nid' => $variables['node']->nid)),'setting');   //send var to js
+  drupal_add_js(drupal_get_path('module', 'tm') . '/js/tm.master.js');
+    
+  $variables['scripts'] = drupal_get_js();
+
+}
+
+function tm_block_info() {
+  $blocks['tm_breadcrumb'] = array(
+    'info' => t('breadcrumb'), //The name that will appear in the block list.
+    'cache' => DRUPAL_CACHE_GLOBAL, // The block is the same for every user on every page where it is visible.
+  );  
+  return $blocks;
+}
+ 
+function tm_block_view($delta = '') {
+  switch ($delta) {
+    case 'tm_breadcrumb':
+        if($node = menu_get_object()) {
+          if($node->ds_switch == 'page_sub') {
+            $title = drupal_get_title();
+            $BREADCRUMB = drupal_get_breadcrumb(); 
+
+            $BREADCRUMB[] = '<span class="breadcrumb-title">' . $title . '</span>';
+
+            $block['subject'] = t("");
+            $block['content'] = '<div id="breadcrumb">' . implode('<span class="breadcrumb-separator"> > </span>', $BREADCRUMB) . '</div>';
+          }
+        }
+
+    return $block;  
+  }
+}
+
+  function tm_preprocess_block(&$vars) {
+    // $block_id = $vars['block']->module . '-' . $vars['block']->delta;
+    // $classes = &$vars['attributes_array']['class'];
+    // $title_classes = &$vars['title_attributes_array']['class'];
+    // $content_classes = &$vars['content_attributes_array']['class'];
+   
+
+    // switch ($block_id) {   
+    //   case 'tm-tm_breadcrumb':
+
+
+
+
+    //   break;  
+    // }
+  }
+
+function tm_node_view($node, $view_mode, $langcode) {
+  // if($node->nid == 14) {
+  //   $node->content['field_colonne_de_gauche'][0]['#markup'] .= render(drupal_get_form('tm_contact_form'));
+  // }
+}
+
+function tm_admin_paths_alter(&$paths) {
+  // $paths['user'] = FALSE;
+  // $paths['user/*'] = FALSE;
+  // $paths['user/*/edit-profile'] = FALSE;
+  // $paths['user/1/edit'] = FALSE;
+  // $paths['node/*/edit'] = FALSE;
+  // $paths['node/add/*'] = FALSE;
+  //$paths['admin/members'] = FALSE;
+} 
+  
+  function tm_form_alter(&$form, &$form_state, $form_id) {
+//e($form_id);    
+    switch ($form_id) {  
+      
+      case 'search_block_form':
+//e($form);
+        $form['search_block_form']['#default_value'] = t('Search this site...');
+        $form['search_block_form']['#size'] = 30;
+        $form['actions']['submit'] = array('#type' => 'image_button', '#src' => base_path() . path_to_theme() . '/images/search_icon.png');
+      break;                                     
+    } 
+  }
+
+
+function tm_contact_form($form, &$form_submit) {
+
+}
+
+function tm_contact_form_submit($form, &$form_state) {
+
+  
+  // drupal_set_message('submitted (need to mail)');
+}
+
+
+  function e($data='test', $print=true){
+    $return = '<pre style="background-color: #fff;">' . print_r($data, $print) . '</pre>';
+    
+    echo($return);
+    
+    return $return;
+  }
+
+  function div($html,$OPTION = ""){
+    if(is_array($OPTION)){
+      while(list($key, $value) = each($OPTION)) {
+        $inside .= ' '.$key.'="'.$value.'"';
+      }
+    } 
+    $html = '<div '.$inside.'>'.$html.'</div>';
+    return $html;
+  }
+

@@ -408,6 +408,7 @@ body:before {
   margin: 30px 0px 0px -1px;
   padding: 0px 0px 3px 0px;
   min-width: 1060px;
+
 }
 
 #block-superfish-1 li.sf-depth-1 {
@@ -417,8 +418,9 @@ body:before {
   -webkit-border: none;
   -webkit-radius: none;
   border: 1px solid #fff;
-  border-bottom: 0px solid #fff;
+  border-bottom: 1px solid #fff;
   border-radius: 0px;
+
 }
 
   #block-superfish-1 li.sf-depth-1 a.sf-depth-1 {
@@ -436,20 +438,25 @@ body:before {
       }
 
       #block-superfish-1 li.sf-depth-1 li{
-        background: #fff;
+       background: transparent;
       }     
 
     #block-superfish-1 li.sf-depth-1:hover {
       background: #fff;
       border: 1px solid #b8b9ba;
-      border-bottom: 0px solid #fff;
+      border-bottom: 1px solid #fff;
+      z-index: 600;
     }
 
-    #block-superfish-1 li.sf-depth-1 li.sf-depth-1:hover {
-      background: #fff;
-      border: 1px solid #fff;
-      border-bottom: 0px solid #fff;
-    }    
+      #block-superfish-1 li.sf-depth-1 li.sf-depth-1 {
+        background: none;
+        border: 0px solid #fff;
+      }    
+
+      #block-superfish-1 li.sf-depth-1 li.sf-depth-1:hover {
+        background: none;
+        border: 0px solid #fff;
+      }    
 
     #block-superfish-1 li.sf-depth-1:hover a.sf-depth-1.active-trail,
     #block-superfish-1 li.sf-depth-1:hover a.sf-depth-1.active {
@@ -462,31 +469,85 @@ body:before {
 
 #block-superfish-1 ul ul {
   background: #fff;
-  top: -21px;
   margin: 0px 0px 0px 0px;
   border: 1px solid #b8b9ba;
   border-top: 0px solid #fff;
   top: 30px;
-  width: 650px;
-  min-height: 150px;
+  width: 654px;
+  min-height: 175px;
+  left: -1px;
+  position: absolute;
+  z-index: 0;
+  background: #fff url("../images/menu_aboutus.jpg") 425px center no-repeat;
 }
 
-#block-superfish-1 ul ul ol {
+  /* offset */
+
+  #block-superfish-1 ul #menu-818-1 ul {
+    background-image: url("../images/menu_aboutus.jpg");
+    left: -98px;
+  }
+
+  #block-superfish-1 ul #menu-819-1 ul {
+    background-image: url("../images/menu_aboutus.jpg");
+    left: -254px;
+  }
+
+  #block-superfish-1 ul #menu-820-1 ul {
+    background-image: url("../images/menu_aboutus.jpg");
+    left: -388px;
+  }
+
+  #block-superfish-1 ul #menu-821-1 ul {
+    background-image: url("../images/menu_aboutus.jpg");
+    left: -560px;
+  }
+
+  #block-superfish-1 ul #menu-822-1 ul {
+    background-image: url("../images/menu_aboutus.jpg");
+    background-position: 390px center;
+    width: 619px;
+    left: -268px;
+  }
+
+  #block-superfish-1 ul #menu-823-1 ul {
+    background-image: url("../images/menu_aboutus.jpg");
+    background-position: 390px center;
+    width: 619px;
+    left: -540px;
+  }
+
+
+#block-superfish-1 ul ul {
   padding: 10px 100px 10px 10px;
-  background: transparent url("../images/menu_aboutus.jpg") 10px 10px no-repeat;
+  
 }
 
   #block-superfish-1 li.sf-depth-2 {
     /*background: #fff;*/
-    margin: 0px 0px 0px 10px;
+    margin: 0px 5px 0px 10px;
     -webkit-appearance: none;
     -webkit-border: none;
     -webkit-radius: none;
     border: 0px solid #fff;
     border-bottom: 1px solid #eee;
     border-radius: 0px;
-    width: 200px;
+    width: 190px;
+
   }
+
+    #block-superfish-1 ul #menu-822-1 li.sf-depth-2  {
+      float: none;
+    }
+
+    #block-superfish-1 ul #menu-823-1 li.sf-depth-2  {
+      float: none;
+    }
+
+      #block-superfish-1 ul li.last  {
+        border-bottom: 0px solid #eee;
+      }
+
 
     #block-superfish-1 li.sf-depth-2 a {
       background: transparent url("../images/arrow_gray.png") left 10px no-repeat;
@@ -498,7 +559,7 @@ body:before {
 
     #block-superfish-1 li.sf-depth-2:hover {
       /*background: #fff;*/
-      border: 0px solid #fff;
+     /* border: 0px solid #fff;*/
     }
 
       #block-superfish-1 li.sf-depth-2:hover a {
@@ -519,9 +580,67 @@ body:before {
     #block-menu-menu-menu-bottom li a {
       font-size: 11px;
       color: #000;
+      text-decoration: none;
     }
 
+/* SEARCH */
 
+#block-search-form {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
+  #block-search-form h2 {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  #block-search-form .form-item-search-block-form {
+  }
+
+    #edit-search-block-form--2 {
+      height: 23px;
+      padding: 2px 4px 4px 8px;
+      font-style: italic;
+      color: #777;
+      border: 1px solid #ccc;
+      margin: 0px;
+      /*font-size: 0.9em;*/
+    }
+
+    #edit-actions {
+      margin: 0px 0px 0px -4px;
+      padding: 2px 1px 3px 1px;
+      border: 1px solid #ccc;
+    }
+
+      #edit-submit {
+       margin: -2px 0px -5px 0px;
+       /* padding: -5px 1px 3px 1px;*/
+       /*top: 5px;*/
+      }
+
+
+/* BREADCRUMB */
+
+#breadcrumb {
+  margin: 10px 0px 0px 0px;
+  color: #e60d2e;
+}
+
+  #breadcrumb .breadcrumb-separator {
+    color: #000;
+  }
+
+  #breadcrumb a {
+    color: #000;
+  }
+
+      #breadcrumb a:hover {
+        color: #e60d2e;
+        text-decoration: none;
+      }
 
 /* SPLASH */
 
@@ -584,7 +703,8 @@ body:before {
     }
 
       .page-main-header {
-
+        height: 375px;
+        overflow: hidden;
       }
         .page-banner {
           z-index: 0;
@@ -681,6 +801,11 @@ body:before {
 
 }
 
+        .page-main-banner {
+          height: 375px;
+          overflow: hidden;
+        }  
+
         .page-main-sub .page-banner {
           height: 375px;
         }
@@ -718,6 +843,14 @@ body:before {
                 #content .page-main-sub .page-main-nav ul.menu li {
                   padding-bottom: 4px;
                 }
+
+                  #content .page-main-sub .page-main-nav ul.menu li li {
+                    padding-bottom: 0px;
+                  }
+
+                    #content .page-main-sub .page-main-nav ul.menu li li a {
+                      line-height: 1.4em;
+                    } 
 
                 #content .page-main-sub .page-main-nav ul ul a:before {
                   content: "- ";
@@ -763,6 +896,12 @@ body:before {
   font-size: 1.2em;
 }
 
+    .page-text-bottom-inner {
+      display: table-cell;
+      vertical-align: middle;
+      height: 265px;
+    }
+
 /* ----- RESPONSIVE ----- */
 
 @media screen and (max-width: 1060px) {
@@ -780,6 +919,13 @@ body:before {
     background: none;
 
   }
+
+
+
+  .page-main-banner {
+    height: auto;
+    overflow: inherit;
+  }  
 
   .page-main-title {
     top: 20px;
@@ -855,10 +1001,15 @@ body:before {
   }
 
   .page-text-bottom {
+
     height: auto;
     padding: 20px;
     margin: 20px 0px;
   }  
+
+    .page-text-bottom-inner {
+
+    }
 
   #logo-footer {
     display: block;
